@@ -25,8 +25,7 @@ tmp/
 *.bak
 *~.nib
 .settings/
-.loadpath
-
+n.loadpath
 
 /build
 /captures
