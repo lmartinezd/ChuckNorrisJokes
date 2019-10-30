@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ChuckNorrisJokes</string>
+    <string name="string_category">Categoria</string>
 </resources>
