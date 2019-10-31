@@ -11,6 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.Retrofit
 import com.lmf.chucknorrisjokes.BuildConfig
 import com.lmf.chucknorrisjokes.data.repository.JokeApi
+import com.lmf.chucknorrisjokes.ui.category.CategoryContract
+import com.lmf.chucknorrisjokes.ui.category.CategoryPresenter
 import com.lmf.chucknorrisjokes.ui.main.MainContract
 import com.lmf.chucknorrisjokes.ui.main.MainPresenter
 import okhttp3.OkHttpClient
@@ -55,4 +57,8 @@ class AppModule {
         return MainPresenter(api)
     }
 
+    @Provides
+    fun provideCategoryPresenter(api: JokeApi): CategoryContract.Presenter {
+        return CategoryPresenter(api)
+    }
 }

@@ -1,6 +1,5 @@
 package com.lmf.chucknorrisjokes.ui.main
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -14,9 +13,6 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity(), MainContract.View  {
 
     @Inject lateinit var presenter: MainContract.Presenter
-
-    @Inject
-    lateinit var app: Context
 
     private lateinit var mAdapter: MainCategoryAdapter
 
@@ -41,7 +37,6 @@ class MainActivity : AppCompatActivity(), MainContract.View  {
 
         presenter.attach(this)
         presenter.loadResults()
-
     }
 
     override fun onDestroy() {
